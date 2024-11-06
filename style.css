@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-text-color: #00000099;
+    --background-color: #FFFFFF;
+    --highlight-color: #FF3333;
+}
+
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.sign-up {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18.9px;
+    text-align: center;
+    height: 38px;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.sign-up span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.9px;
+}
+
+.navbar h2 {
+    font-size: 25px;
+    font-weight: 1000;
+    line-height: 38.4px;
+    text-align: left;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    padding: 11px;
+    display: inline;
+}
+
+.navbar ul{
+    padding-top: 10px; 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--main-text-color);
+
+}
+
+.navbar input {
+    width: 500px;
+    height: 40px;
+    padding: 12px 16px 12px 16px;
+    font-size: 18px;
+    border-radius: 62px;
+    border: none;
+    outline: none;
+    background: #F0F0F0;
+}
+
+.navbar {
+    gap: 40px;
+    height: 60px;
+    padding: 1.5vh 8vh;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+
+}
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    display: none;
+}
+
+.hugs img {
+    width: 26px;
+    margin: 7px;
+}
+
+.hugs img:first-child{
+    display: none;
+} 
+
+/* hero section */
+.hero-section {
+    padding: 20vh 8vh 0vh 8vh;
+    justify-content: space-between;
+    margin-bottom: -4px;
+}
+
+.hero-heading {
+    width: 50%;
+}
+
+.hero-heading h1 {
+    font-weight: 1000;
+    font-size: 58px;
+    line-height: 58px;
+    padding-top: 2vh;
+}
+
+.hero-heading p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 20px;
+    color: #00000099;
+
+}
+
+.hero-heading button {
+    background: #000000;
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding: 16px 54px 16px 54px;
+    border-radius: 62px;
+    font-size: 18px;
+    border: none;
+}
+
+.hero-img img {
+    width: 430px;
+    position: relative;
+}
+
+.star-1 {
+    width: 80px;
+    position: absolute;
+    right: 65px;
+    top: 165px;
+}
+
+.star-2 {
+    position: absolute;
+    right: 420px;
+    top: 326px;
+}
+
+.stocks {
+    gap: 25px;
+    padding-top: 30px;
+}
+
+.stock-details p {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    color: var(--main-text-color);
+
+}
+
+.vl {
+    height: 48px;
+    width: 2px;
+    background-color: #a7a5a5;
+    opacity: 0.3;
+}
+
+.brand-logos {
+    height: 122px;
+    background-color: #000000;
+    justify-content: center;
+    gap: 80px;
+    padding: 4% 8vh;
+}
+
+
+/* card section */
+.cards-container {
+    padding: 6vh 8vh;
+}
+
+.card-item {
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.card {
+    width: 255px;
+    height: 375px;
+}
+
+.item-img img {
+    border-radius: 20px;
+    width: 255px;
+    height: 258px;
+}
+
+.item-text p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.item-text p~p {
+    font-size: 22px;
+}
+
+.item-text svg {
+    width: 100px;
+}
+
+.discount-rate p {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.discount-rate {
+    gap: 10px;
+}
+
+.discount-rate p~p {
+    color: #00000066;
+
+}
+
+.discount-rate :nth-child(3) {
+    color: red;
+    font-size: 14px;
+    background-color: #FF33331A;
+    border-radius: 15px;
+    width: 60px;
+    text-align: center;
+}
+
+.view-all-btn button {
+    width: 160px;
+    height: 45px;
+    margin-top: 30px;
+    padding: 16px 54px 16px 54px;
+    gap: 12px;
+    border-radius: 62px;
+    border: 1px;
+
+}
+
+/* style section */
+
+.card:hover {
+    transform: scale(1.02);
+}
+.style-box {
+    margin: 0 8vh;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.style-card {
+    padding: 4vh 8vh;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 1fr;
+    gap: 15px
+}
+
+.item img {
+    border-radius: 20px;
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+
+.item-text {
+    position: absolute;
+    z-index: 20;
+}
+
+.item-2 {
+    grid-column: 2/4;
+}
+
+.item-3 {
+    grid-column: 1/3;
+}
+
+.item p {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 48.6px;
+    text-align: left;
+    padding: 20px;
+}
+
+/* OUR HAPPY CUSTOMERS section */
+.happy-container {
+    padding: 8vh;
+}
+
+.happy-container h2 {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.rating-card {
+    width: 400px;
+    height: 240px;
+    border: 1.05px solid #0000001A;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.rating-card p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #00000066;
+    padding-top: 10px;
+}
+
+.rating-container {
+    gap: 20px;
+}
+
+.name {
+    gap: 5px;
+    padding-top: 20px;
+}
+
+.name h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+
+}
+
+.arrows {
+    align-items: center;
+    gap: 10px;
+}
+
+/* footer section */
+.about {
+    margin: 0 8vh;
+    background-color: #000000;
+    border-radius: 20px;
+    gap: 140px;
+    padding: 36px 60px;
+    position: absolute;
+    top: -100px;
+    z-index: 100;
+    left: 0;
+    align-items: center;
+}
+
+.about h2 {
+    color: white;
+    text-align: left;
+    line-height: 45px;
+}
+
+.email-input input {
+    width: 349px;
+    height: 48px;
+    padding: 12px 16px 12px 16px;
+    gap: 12px;
+    border-radius: 62px;
+    border: none;
+    outline: none;
+}
+
+.email-input button {
+    width: 349px;
+    height: 46px;
+    padding: 12px 16px 12px 16px;
+    gap: 12px;
+    border-radius: 62px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.shop-co {
+    width: 291px;
+}
+
+.shop-co {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color:var(--main-text-color);
+}
+
+.shop-co p {
+    padding: 20px 0;
+}
+
+.about-details {
+    padding: 25vh 0vh;
+    height: 350px;
+    gap: 100px;
+    margin-top: 15vh;
+}
+
+.footer-container {
+    position: relative;
+    padding: 0 8vh;
+}
+
+.footer-contain {
+    width: 200px;
+}
+
+.footer-heading {
+    letter-spacing: 3px;
+}
+
+.footer-contain p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    padding-bottom: 20px;
+    color:var(--main-text-color);
+
+}
+
+footer {
+    padding-top: 10px;
+}
+
+.copy-right p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    color: var(--main-text-color);
+}
+
+.payment li {
+    list-style: none;
+}
+
+
+/* Header shadow effect on scroll */
+header {
+    transition: box-shadow 0.3s ease;
+}
+header.scrolled {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover and active effects */
+.hero-heading button,
+.view-all-btn button,
+.email-input button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-heading button:hover,
+.view-all-btn button:hover,
+.email-input button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Navbar links hover effect */
+.navbar ul li a:hover {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+

@@ -1,0 +1,36 @@
+.bg-color {
+    background-color: #F2F0F1;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.bg-color {
+    background-color: #F2F0F1;
+}
+
+.space {
+    justify-content: space-between;
+}
+
+.line {
+    opacity: 0.3;
+    color: #a7a5a5;
+    margin-top: 14vh;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 57.6px;
+    text-align: center;
+}
+
+.gap {
+    gap: 20px;
+}
