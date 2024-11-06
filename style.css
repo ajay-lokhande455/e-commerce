@@ -478,7 +478,6 @@ header.scrolled {
 .view-all-btn button:hover,
 .email-input button:hover {
     background-color: #333;
-    transform: scale(1.05);
 }
 
 /* Navbar links hover effect */
