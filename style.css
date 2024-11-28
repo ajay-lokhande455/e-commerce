@@ -34,18 +34,23 @@ header {
 
 }
 
-.sign-up span {
+.sign-up a {
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     line-height: 18.9px;
+    color: #FFFFFF;
 }
 
-.navbar h2 {
+.navbar a {
+    text-decoration: none;
+}
+.navbar a h2 {
     font-size: 25px;
     font-weight: 1000;
     line-height: 38.4px;
     text-align: left;
-
+    color:#333;
 }
 
 .navbar ul li {
@@ -54,8 +59,8 @@ header {
     display: inline;
 }
 
-.navbar ul{
-    padding-top: 10px; 
+.navbar ul {
+    padding-top: 10px;
 }
 
 .navbar ul li a {
@@ -67,14 +72,19 @@ header {
 .navbar input {
     width: 400px;
     height: 40px;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px 12px 50px;
     font-size: 18px;
     border-radius: 62px;
     border: none;
     outline: none;
     background: #F0F0F0;
 }
-
+.search-bar a img {
+    position: absolute;
+    top: 55px;
+    right: 566px;
+    color: #333;
+}
 .navbar {
     gap: 40px;
     height: 60px;
@@ -85,22 +95,18 @@ header {
 
 }
 
-#check{
+#check {
     display: none;
 }
 
-.checkbtn{
+.checkbtn {
     display: none;
 }
 
-.hugs img {
+.hugs a img {
     width: 26px;
     margin: 7px;
 }
-
-.hugs img:first-child{
-    display: none;
-} 
 
 /* hero section */
 .hero-section {
@@ -109,13 +115,11 @@ header {
     margin-bottom: -4px;
 }
 
-.hero-heading {
-    width: 50%;
-}
+
 
 .hero-heading h1 {
     font-weight: 1000;
-    font-size: 58px;
+    font-size: 69px;
     line-height: 58px;
     padding-top: 2vh;
 }
@@ -125,6 +129,7 @@ header {
     font-size: 16px;
     line-height: 22px;
     padding-top: 20px;
+    padding-right: 204px;
     color: #00000099;
 
 }
@@ -141,20 +146,23 @@ header {
 
 .hero-img img {
     width: 430px;
+}
+
+.hero-img {
     position: relative;
 }
 
 .star-1 {
     width: 80px;
     position: absolute;
-    right: 65px;
-    top: 165px;
+    right: 5px;
+    top: 80px;
 }
 
 .star-2 {
     position: absolute;
     right: 420px;
-    top: 326px;
+    top: 240px;
 }
 
 .stocks {
@@ -265,6 +273,7 @@ header {
 .card:hover {
     transform: scale(1.02);
 }
+
 .style-box {
     margin: 0 8vh;
     padding: 30px;
@@ -406,7 +415,7 @@ header {
     font-weight: 400;
     line-height: 22px;
     text-align: left;
-    color:var(--main-text-color);
+    color: var(--main-text-color);
 }
 
 .shop-co p {
@@ -439,7 +448,7 @@ header {
     line-height: 19px;
     text-align: left;
     padding-bottom: 20px;
-    color:var(--main-text-color);
+    color: var(--main-text-color);
 
 }
 
@@ -463,6 +472,7 @@ footer {
 header {
     transition: box-shadow 0.3s ease;
 }
+
 header.scrolled {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -488,3 +498,170 @@ header.scrolled {
     transition: color 0.3s;
 }
 
+/* Base styles remain unchanged */
+
+/* Responsive styles */
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        /* Hide navbar links */
+        flex-direction: column;
+        /* Stack items vertically if shown */
+    }
+
+    .navbar {
+        padding: 1.5vh 5vh;
+    }
+
+    .checkbtn {
+        display: block;
+        /* Show menu toggle button */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .navbar ul li {
+        display: block;
+        /* Stack navbar items */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar input {
+        display: none;
+    }
+
+    .hero-section {
+        padding: 10vh 4vh 0 4vh;
+        /* Adjust padding for smaller screens */
+        flex-direction: column;
+        /* Stack hero content */
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-heading {
+        width: 100%;
+    }
+
+    .hero-heading h1 {
+        padding-top: 40px;
+        font-size: 40px;
+        text-align: left;
+        /* Reduce font size for smaller screens */
+    }
+
+    .stocks {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-heading p {
+        font-size: 14px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .hero-img img {
+        width: 80%;
+        /* Reduce image size */
+    }
+
+    .star-1{
+        right: -14px;
+        top: 30px
+    }
+
+    .brand-logos{
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo svg{
+        width: 82px;
+    }
+
+    .card-heading h2{
+        font-size: 32px;
+    }
+    .card-item{
+        flex-wrap: wrap;
+        padding: 0 5vh;
+    }
+   
+    .cards-container {
+        grid-template-columns: 1fr;
+        /* Single column for cards */
+        padding: 4vh 4vh;
+    }
+
+    .style-card {
+        grid-template-columns: 1fr;
+        padding: 4vh 0;
+        /* Stack style cards vertically */
+    }
+    .item-2 {
+        grid-column: 1 / 1;
+    }
+
+    .style-box{
+        margin: 4vh 4vh;
+    }
+
+    .style-heading h2{
+        font-size: 32px;
+        text-align: left;
+        line-height: 50px;
+    }
+    .happy-container{
+        padding: 4vh 5vh;
+    }
+    .rating-card {
+        width: 100%;
+    }
+
+    .rating-heading h2{
+        font-size: 32px;
+        line-height: 50px;
+    }
+    .rating-heading{
+        gap: 40px;
+    }
+    .rating-container{
+        flex-wrap: wrap;
+    }
+
+    .about {
+        flex-direction: column;
+        margin: 0 2vh;
+        padding: 20px;
+        /* Stack content vertically */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about-details{
+        padding: 8vh 0vh;
+        flex-wrap: wrap;
+    }
+    .footer-container {
+        padding: 4vh;
+        margin: 10vh 0;
+        /* Reduce padding for smaller screens */
+    }
+
+
+
+    .footer-heading p{
+        padding-bottom: 4px;
+    }
+}

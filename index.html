@@ -13,13 +13,13 @@
     <!-- header sections -->
     <header>
         <div class="sign-up">
-            <p>Sign up and get 20% off to your first order. <span>Sign Up Now</span></p>
+            <p>Sign up and get 20% off to your first order. <a href="#"> Sign Up Now</a></p>
         </div>
         <div class="navbar flex">
             <div class="main-logo flex gap">
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">&#x2630;</label>
-                <h2>SHOP.CO</h2>
+                <!-- <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">&#x2630;</label> -->
+                <a href="#"><h2>SHOP.CO</h2></a>
             </div>
             <ul>
                 <li><a href="">Shop</a></li>
@@ -27,11 +27,14 @@
                 <li><a href="">New Arrivals</a></li>
                 <li><a href="">Brands</a></li>
             </ul>
-            <input type="text" placeholder="Search for product">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for product">
+                <a href="#"><img src="assets/search.svg" alt=""></a>
+            </div>
             <div class="hugs">
-                <img src="assets/search.svg" alt="">
-                <img src="assets/cart.svg" alt="">
-                <img src="assets/account.svg" alt="">
+                
+                <a href="#"><img src="assets/cart.svg" alt=""></a>
+                <a href="#"><img src="assets/account.svg" alt=""></a>
             </div>
         </div>
     </header>
@@ -633,7 +636,7 @@
             </div>
         </div>
         <hr class="line">
-        <footer class="flex space">
+        <footer class=" footer flex space">
             <div class="copy-right">
                 <p>© 2000-2021, All rights reserved</p>
             </div>
@@ -851,6 +854,8 @@
             </div>
         </footer>
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
