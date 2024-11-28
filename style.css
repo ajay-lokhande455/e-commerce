@@ -207,28 +207,35 @@ header {
 .card {
     width: 255px;
     height: 375px;
+    padding: 2vh;
 }
 
 .item-img img {
     border-radius: 20px;
     width: 255px;
     height: 258px;
+    background-color: #F0F0F0;
+}
+.pricing {
+    display: flex;
+    gap: 15px;
 }
 
-.item-text p {
-    font-size: 18px;
+.pricing p {
+    font-size: 24px;
     font-weight: 700;
     line-height: 27px;
     padding-top: 5px;
     text-align: left;
 }
 
-.item-text p~p {
-    font-size: 22px;
+.pricing p~p{
+    color: #a7a5a5;
 }
 
-.item-text svg {
-    width: 100px;
+.item-text {
+    padding: 2vh;
+    font-size: 15px;
 }
 
 .discount-rate p {
@@ -243,10 +250,7 @@ header {
     gap: 10px;
 }
 
-.discount-rate p~p {
-    color: #00000066;
 
-}
 
 .discount-rate :nth-child(3) {
     color: red;
