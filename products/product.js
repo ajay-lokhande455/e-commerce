@@ -11,6 +11,7 @@ window.addEventListener('load', async () => {
 
         // Select the element where product details will be displayed
         const productDetails = document.querySelector('.product-detail');
+ 
 
         // Render the product details into the DOM
         productDetails.innerHTML = `
@@ -21,9 +22,11 @@ window.addEventListener('load', async () => {
                 <div class="title">
                     <h2>${product.title}</h2>
                 </div>
-                <div class="rating">
-                    <p>Rating: ${product.rating}</p>
-                </div>
+                <div
+                    class="rating"
+                    style="--rating: ${product.rating}"
+                    aria-label="Rating: ${product.rating} out of 5" >
+                    </div>
                 <div class="pricing">
                     <p>Price: $${product.price}</p>
                     <p>Discount: ${product.discountPercentage}%</p>
@@ -41,10 +44,28 @@ window.addEventListener('load', async () => {
                 </div>
                 <hr />
                 <div class="add-to-card">
-                    <button>Add to Cart</button>
+                    <button onclick="addToCard(${id})">Add to Cart</button>
                 </div>
             </div>`;
+
+            
+            
+
     } catch (error) {
         console.error("An error occurred:", error);
     }
 });
+
+
+
+function addToCard(id) {
+    const productInCard = localStorage.getItem("cart-product");
+    if (!productInCard){
+        localStorage.setItem("cart-product", [id]);
+    }
+   const idsArray = productInCard.split(","); //
+        idsArray.push(id);
+        localStorage.setItem("cart-product", idsArray);
+
+    
+}

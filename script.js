@@ -3,7 +3,7 @@ const newArrivals = document.querySelector('.card-item');
 // Fetch data from API
 window.addEventListener('load', async () => {
     try {
-        const request = await fetch('https://dummyjson.com/products?limit=8');
+        const request = await fetch('https://dummyjson.com/products?limit=4');
         const response = await request.json();
         const productArray = response.products;
         showProducts(productArray)
@@ -19,7 +19,7 @@ const showAll = document.querySelector('.show-all');
 showAll.addEventListener('click', async () => {
     try {
 
-        const request = await fetch('https://dummyjson.com/products?skip=8');
+        const request = await fetch('https://dummyjson.com/products?skip=4');
         const response = await request.json();
         
         const productArray = response.products;
@@ -48,7 +48,7 @@ function showProducts(productArray) {
 
 
         const imgLink = document.createElement('a');
-        imgLink.setAttribute('href', `product.html?id=${i + 1}`);
+        imgLink.setAttribute('href', `products/product.html?id=${i + 1}`);
         itemImg.appendChild(imgLink);
         // Create new image element and add source to it
         const img = document.createElement('img');
@@ -67,9 +67,17 @@ function showProducts(productArray) {
         price.textContent = `$${productArray[i].price}`;
         const discount = document.createElement('p');
         discount.textContent = `$${productArray[i].discountPercentage}`; 
+        const ratingPara = document.createElement("p");
+
+    // to-do add 2.5 / 5 after start
+    ratingPara.innerHTML = `<div
+  class="rating"
+  style="--rating: ${productArray[i].rating}"
+  aria-label="Rating: ${productArray[i].rating} out of 5" >
+  </div> `;
 
         priceText.append(price, discount);
-        itemText.append(title, priceText) ; // Corrected here to use 'title'
+        itemText.append(title, ratingPara, priceText) ; // Corrected here to use 'title'
 
         productDiv.append(itemImg, itemText)
 
