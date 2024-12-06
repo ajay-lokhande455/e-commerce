@@ -18,20 +18,30 @@ window.addEventListener('load', async () => {
 const showAll = document.querySelector('.show-all'); 
 showAll.addEventListener('click', async () => {
     try {
-
+        const productContainer = document.querySelector('.card-item'); // Assuming you have a container for products
+        
+        // Check if products are already shown
+        if (showAll.innerHTML === "Hide all") {
+            productContainer.innerHTML = ""; // Clear the product container
+            showAll.innerHTML = "Show all"; // Update the button text
+            return; // Exit the function
+        }
+        
+        // Fetch and display products
         const request = await fetch('https://dummyjson.com/products?skip=4');
         const response = await request.json();
         
         const productArray = response.products;
 
-        showProducts(productArray); 
+        showProducts(productArray); // Function to display products
+
+        showAll.innerHTML = "Hide all"; // Update the button text
 
     } catch (error) {
         console.error('Error fetching data:', error);
     }
-    
-    
 });
+
 
 
 function showProducts(productArray) {
@@ -86,13 +96,3 @@ function showProducts(productArray) {
     }
 }
 
-
-/*         <div class="card" id="product">
-                <div class="item-img">
-                    <img src="assets/t-shirt.png" alt="">
-                </div>
-                <div class="item-text">
-                    <p>T-shirt with Tape Details</p>
-                    <p>$120</p>
-                </div>
-            </div> */
