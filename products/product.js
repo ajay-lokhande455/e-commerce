@@ -59,11 +59,11 @@ window.addEventListener('load', async () => {
 
 
 function addToCard(id) {
-    const productInCard = localStorage.getItem("cart-product");
+    const productInCart = localStorage.getItem("cart-product");
     if (!productInCard){
         localStorage.setItem("cart-product", [id]);
     }
-   const idsArray = productInCard.split(","); //
+   const idsArray = productInCart.split(","); //
         idsArray.push(id);
         localStorage.setItem("cart-product", idsArray);
 
